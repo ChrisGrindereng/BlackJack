@@ -15,28 +15,7 @@ namespace BlackJack
         static void Main(string[] args)
         {
             dealNewHand();
-            //Deck newdeck = new BlackJack.Deck();
-            //Player me = new BlackJack.Player();
-            //Dealer dealer = new BlackJack.Dealer();
-
-            //newdeck.getrandomized();
-            //int turns = 0;
-            //Console.WriteLine("Lets play Black Jack");
-
-
-            //for (int i = 0; i < 2; i++)
-            //{
-
-            //    me.getHand(newdeck.Deal(turns), i);
-            //    turns++;
-
-            //    dealer.getDealerHand(newdeck.Deal(turns), i);
-            //    turns++;
-
-            //}
-
-            //displayHand(me);
-            //displayScore(me);
+            
 
             //Dispaying first dealer and player cards for debug purposes
 
@@ -123,10 +102,10 @@ namespace BlackJack
         {
             Console.WriteLine("-------------------------------------------------");
             Console.WriteLine("Dealer Hand:");
-
+           
             for (int i = 0; i < dealer.dealerHand.Length; i++)
             {
-                if (dealer.dealerHand[i] != null)
+                if (dealer.dealerHand[i] != null )
                 {
                     Console.Write(dealer.dealerHand[i].rank.ToString());
                     Console.WriteLine(dealer.dealerHand[i].suit.ToString());
@@ -146,12 +125,14 @@ namespace BlackJack
             if (player.getScore() > 21)
             {
                 Console.WriteLine("*****  Player Busts.... You Lose!  ******");
+                playAgain();
             }
             else if (dealer.getDealerScore() > 21)
             {
                 Console.WriteLine("!!!!!!!!!  Dealer Busts! You WIN :)  !!!!!!!!!!!");
+                playAgain();
             }
-            playAgain();
+
         }
         
         public static void win(Player player, Dealer dealer)
@@ -159,25 +140,45 @@ namespace BlackJack
             
             if (player.getScore() == 21 && dealer.getDealerScore() == 21)
             {
+                displayDealerHand(dealer);
+                displayDealerScore(dealer);
+                displayHand(player);
+                displayScore(player);
                 Console.WriteLine("_______The BlackJack for everyone!!_______");
 
             }
             else if (player.getScore() == 21)
             {
+                displayDealerHand(dealer);
+                displayDealerScore(dealer);
+                displayHand(player);
+                displayScore(player);
                 Console.WriteLine("$$$$$$$$$$$$$$  BlackJack!! You WIN!!!  $$$$$$$$$$$$$$");
                 
             }
             else if (dealer.getDealerScore() == 21)
             {
+                displayDealerHand(dealer);
+                displayDealerScore(dealer);
+                displayHand(player);
+                displayScore(player);
                 Console.WriteLine("????????????  BlackJack for the Dealer..... Dealer Wins :(  ????????????");
 
             }
             else if (player.getScore() < 21 && player.getScore() > dealer.getDealerScore())
             {
+                displayDealerHand(dealer);
+                displayDealerScore(dealer);
+                displayHand(player);
+                displayScore(player);
                 Console.WriteLine("################   You WIN!!!!!   ##############");
             }
             else if (dealer.getDealerScore() < 21 && player.getScore() < dealer.getDealerScore())
             {
+                displayDealerHand(dealer);
+                displayDealerScore(dealer);
+                displayHand(player);
+                displayScore(player);
                 Console.WriteLine("<<<<<<<<  What?? Dealer Wins   >>>>>>>>>");
             }
             playAgain();
@@ -219,7 +220,10 @@ namespace BlackJack
 
             }
 
-            displayDealerHand(dealer);
+            Console.WriteLine("-------------------------------------------------");
+            Console.WriteLine("Dealer Hand:");
+            Console.Write(dealer.dealerHand[0].rank.ToString());
+            Console.WriteLine(dealer.dealerHand[0].suit.ToString());
 
             displayHand(me);
             displayScore(me);
@@ -234,6 +238,7 @@ namespace BlackJack
                 displayHand(me);
                 displayScore(me);
                 checkBust(me, dealer);
+
             }
 
 
@@ -246,6 +251,7 @@ namespace BlackJack
                 displayDealerScore(dealer);
                 checkBust(me, dealer);
             }
+
             win(me, dealer);
 
         }
