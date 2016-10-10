@@ -124,27 +124,43 @@ namespace BlackJack
         {
             if (player.getScore() > 21)
             {
+                displayDealerHand(dealer);
+                displayDealerScore(dealer);
                 Console.WriteLine("*****  Player Busts.... You Lose!  ******");
                 playAgain();
             }
             else if (dealer.getDealerScore() > 21)
             {
+                displayDealerHand(dealer);
+                displayDealerScore(dealer);
                 Console.WriteLine("!!!!!!!!!  Dealer Busts! You WIN :)  !!!!!!!!!!!");
                 playAgain();
             }
 
         }
         
-        public static void win(Player player, Dealer dealer)
-        {
-            
+      public static void BlackJack(Player player, Dealer dealer)
+        {   
+            if (player.getScore() == 21)
+            {
+                displayDealerHand(dealer);
+                displayDealerScore(dealer);
+                displayHand(player);
+                displayScore(player);
+                Console.WriteLine("$$$$$$$$$$$$$$  BlackJack!! You WIN!!!  $$$$$$$$$$$$$$");
+                playAgain();
+            }
+        }
+      public static void win(Player player, Dealer dealer)
+       {
             if (player.getScore() == 21 && dealer.getDealerScore() == 21)
             {
                 displayDealerHand(dealer);
                 displayDealerScore(dealer);
                 displayHand(player);
                 displayScore(player);
-                Console.WriteLine("_______The BlackJack for everyone!!_______");
+                Console.WriteLine("_______The BlackJack for everyone!! It's a Push_______");
+                playAgain();
 
             }
             else if (player.getScore() == 21)
@@ -154,15 +170,16 @@ namespace BlackJack
                 displayHand(player);
                 displayScore(player);
                 Console.WriteLine("$$$$$$$$$$$$$$  BlackJack!! You WIN!!!  $$$$$$$$$$$$$$");
-                
+                playAgain();
             }
-            else if (dealer.getDealerScore() == 21)
+             else if (dealer.getDealerScore() == 21)
             {
                 displayDealerHand(dealer);
                 displayDealerScore(dealer);
                 displayHand(player);
                 displayScore(player);
                 Console.WriteLine("????????????  BlackJack for the Dealer..... Dealer Wins :(  ????????????");
+                playAgain();
 
             }
             else if (player.getScore() < 21 && player.getScore() > dealer.getDealerScore())
@@ -172,6 +189,7 @@ namespace BlackJack
                 displayHand(player);
                 displayScore(player);
                 Console.WriteLine("################   You WIN!!!!!   ##############");
+                playAgain();
             }
             else if (dealer.getDealerScore() < 21 && player.getScore() < dealer.getDealerScore())
             {
@@ -180,12 +198,11 @@ namespace BlackJack
                 displayHand(player);
                 displayScore(player);
                 Console.WriteLine("<<<<<<<<  What?? Dealer Wins   >>>>>>>>>");
+                playAgain();
             }
-            playAgain();
-
         }
 
-        public static void playAgain()
+      public static void playAgain()
         {
             Console.WriteLine("Play Again? yes(y) or no(n)");
             if (Console.ReadLine() == "y")
@@ -198,7 +215,7 @@ namespace BlackJack
             }
         }
 
-        public static void dealNewHand()
+      public static void dealNewHand()
         {
             Deck newdeck = new BlackJack.Deck();
             Player me = new BlackJack.Player();
@@ -224,9 +241,11 @@ namespace BlackJack
             Console.WriteLine("Dealer Hand:");
             Console.Write(dealer.dealerHand[0].rank.ToString());
             Console.WriteLine(dealer.dealerHand[0].suit.ToString());
+            Console.WriteLine("?????????");
 
             displayHand(me);
             displayScore(me);
+            BlackJack(me, dealer);
 
             int c = 2;
             int v = 2;
