@@ -4,3 +4,6 @@ C:\Users\cog04\TIY\MyBlackJack\MyBlackJack\obj\Debug\ConsoleApplication1.pdb
 C:\Users\cog04\TIY\MyBlackJack\MyBlackJack\bin\Debug\ConsoleApplication1.exe
 C:\Users\cog04\TIY\MyBlackJack\MyBlackJack\bin\Debug\ConsoleApplication1.pdb
 C:\Users\cog04\TIY\MyBlackJack\MyBlackJack\obj\Debug\MyBlackJack.csprojResolveAssemblyReference.cache
+C:\Users\bryansory\Code\BlackJack-1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\bryansory\Code\BlackJack-1\obj\Debug\ConsoleApplication1.exe
+C:\Users\bryansory\Code\BlackJack-1\obj\Debug\ConsoleApplication1.pdb
