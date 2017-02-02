@@ -11,4 +11,4 @@
  - multiplayer functionality w/ both additional players and computers
  - betting function
  - game can track chips total after several rounds
- - updating the code to a higher level functional as it currently is coded using imperatives and some recursion
+ - updating the code to a functional style from its currently used imperatives with some recursion
