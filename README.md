@@ -8,11 +8,11 @@ C# ASP.NET
 ### To Play
 - The player uses the "y" key to hit and "n" key to stay.
 
-<img src="./Screenshots/BlackJack_FirstHard.png"/>
+<img src="./Screenshots/BlackJack_FirstHand.png"/>
 
 - After each round the player has the option of playing another hand or exiting the game. 
 
-<img src="./Screenshots/BlackJack_PlayerBusts.png"/>
+<img src="./Screenshots/BlackJack_PlayerBust.png"/>
 
 - The game has functionality for tracking the scores a displaying a winner after each round.
 
