@@ -1,14 +1,30 @@
 # BlackJack
+###Technologies, Frameworks and Programming Languages:
+C# ASP.NET
 
-- A console application implementation of Black Jack. It currently functions as a single player game against a computer controlled dealer. 
-
-## To Play
+###Overview of Project:
+- A console application implementation of Black Jack. It functions as a single player game against a computer controlled dealer. 
+### To Play
 - The player uses the "y" key to hit and "n" key to stay.
+<img src="BlackJack_FirstHard.png"/>
 - After each round the player has the option of playing another hand or exiting the game. 
+<img src="BlackJack_PlayerBusts.png"/>
 - The game has functionality for tracking the scores a displaying a winner after each round.
+<img src="BlackJack_PlayerWins.png"/>
 
-##Future Updates
- - multiplayer functionality w/ both additional players and computers
- - betting function
- - game can track chips total after several rounds
- - updating the code to a functional style from its currently used imperatives with some recursion
+###Challenges Faced & Solutions Used: 
+The major challenge faced early on in this application was how create and shuffle a deck of cards. Ultimately, I created a class structure for cards and a deck, using enums for the rank and suits. As a deck was an array of cards I implemented a sorting algorithm to iterate through the array and randomly shuffle the deck. 
+
+<img src="BlackJack_CardDeck.png"/>
+
+###Error Handling and Troubleshooting:
+With one of my biggest challenges being the initial setup of the cards, the deck, and shuffling I needed to make sure I had a way to test those functions before I got into the game mechanics. For this I built out a series of functions to print the unshuffled and shuffled decks to debug effectively. 
+
+<img src="BlackJack_Debuging.png"/>
+
+###Future Updates
+- Building multiplayer functionality with both additional players and computers.
+ - The addition of a betting function.
+ - Allowing the game to track chip totals after several rounds.
+ - I see this game as being a great platform to experiment with functional programming and hope to update the code base in the future. 
+

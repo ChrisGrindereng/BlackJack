@@ -97,16 +97,9 @@ namespace BlackJack
             return score;
         }
 
+}
 
 
-        //public override string ToString()
-        //{
-            
-            
-        //}
-
-
-    }
 
     public class Deck
     {
@@ -186,19 +179,6 @@ namespace BlackJack
         }
      }
 
-    public class gameMechanics
-    {
-       
-
-        
-        
-
-        public void hit()
-        {
-            Console.WriteLine();
-        }
-    }
-
- }
+}
 
    
