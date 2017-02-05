@@ -12,7 +12,7 @@ C# ASP.NET
 
 - After each round the player has the option of playing another hand or exiting the game. 
 
-<img src="Screenshots/BlackJack_PlayerBust.png"/>
+<img src="./Screenshots/BlackJack_PlayBust.png"/>
 
 - The game has functionality for tracking the scores and displaying a winner after each round.
 
